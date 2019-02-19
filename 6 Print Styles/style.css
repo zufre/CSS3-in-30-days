@@ -1,0 +1,104 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ @zufre Sign out
+This repository has been archived by the owner. It is now read-only.
+1
+1 2 Asjas/CSS3-30-Days
+ Code  Pull requests 0  Insights
+CSS3-30-Days/6 - Print Styles/final.css
+8df8c8f  on Jan 2, 2018
+@Asjas Asjas finished Day 6 of CSS3 in 30 Days
+     
+
+
+   @media print {
+
+     /* HIDE UNWANTED ELEMENTS */
+     body::before,
+     .course-files,
+     #logo,
+     .final-result::before,
+     .info::before,
+     .final-result::after,
+     .info::after,
+     .final-result h2,
+     .info h2,
+     img {
+       display: none;
+     }
+
+     /* GLOBAL RESET */
+     body {
+       font-family: Georgia, serif;
+       font-size: 16pt;
+       line-height: 24pt;
+       background: none;
+       color: #000;
+     }
+
+
+     /* LAYOUT RESET */
+     .final-result,
+     .info,
+     section,
+     footer {
+       background: none;
+       width: 100%;
+       border: none;
+       padding: 0;
+       margin: 0;
+       color: #000;
+     }
+
+     section:first-child::before {
+       border: none;
+     }
+
+     /* SPECIFICS */
+     h1,h2,h3,h4,h5,h6 {
+       color: #000;
+       font-size: 24pt;
+       line-height: 30pt;
+       margin: 0;
+     }
+
+     h1 {
+       font-size: 50pt;
+       margin: 0 0 20pt;
+       text-align: center;
+       width: 100%;
+       transform: rotate(0);
+     }
+
+     h1 small {
+       font-size: 24pt;
+       color: #000;
+       margin: 0 0 10pt;
+     }
+
+     .info p {
+       color: #000;
+     }
+
+     a:link {
+       margin: 0;
+     }
+
+     a::after {
+       content: " [" attr(href) "]";
+     }
+
+     footer a:link,
+     footer a:visited {
+       color: #000;
+       background: none;
+       padding: 0;
+     }
+
+   }
